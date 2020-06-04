@@ -37,3 +37,5 @@ jobs:
         files: 'dist'
         name: 'Github Actions'
         email: 'youn@tree-some.dev'
+    - name: hook
+    - run: npm run hook
