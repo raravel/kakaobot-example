@@ -27,3 +27,13 @@ jobs:
     - run: npm ci
     - run: npm install
     - run: npm run build
+    - name: push
+      uses: github-actions-x/commit@v2.6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        push-branch: 'master'
+        commit-message: 'build commit'
+        force-add: 'true'
+        files: 'dist'
+        name: 'Github Actions'
+        email: 'youn@tree-some.dev'
